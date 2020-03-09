@@ -1,0 +1,3 @@
+.section__content {
+    @include flex (space-evenly, stretch, row);
+}

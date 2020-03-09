@@ -1,0 +1,35 @@
+.navbar {
+    @include box-shadow(0, 4px, 3px, 0, $shadow-light);
+    .navbar__content {
+        box-shadow: none;
+        @include flex(space-between, center, row);
+        .menu {
+            @include flex(space-evenly, center, row);
+            text-transform: uppercase;
+            width: 45%;
+            height: 100%;
+            box-shadow: none;
+            position: relative;
+            top: 0;
+            z-index: 101;
+            .menu__link {
+                display: inline-block;
+                font-size: $font-size-basic;
+                font-weight: bold;
+                color: $color-gray;
+                height: 100%;
+                line-height: 7rem;
+                padding: 0 0.5rem;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                &:hover {
+                    border-bottom: 4px solid $color-blue;
+                }
+            }
+        }
+        .hamburger-container {
+            display: none;
+        }
+    }
+}
+

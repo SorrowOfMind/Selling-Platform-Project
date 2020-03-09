@@ -1,0 +1,95 @@
+.section-pricing__content {
+    @include flex (center, center, column);
+    width: 100%;
+    max-width: 950px;
+    padding: 0 1rem 5rem 1rem;
+    margin: 0 auto;
+    .section-pricing__item {
+        @include flex (space-between, center, row);
+        position: relative;
+        padding: 1rem 2rem 4rem 2rem;
+        border-radius: 18px;
+        margin-bottom: 5rem;
+        .section-pricing__header {
+            padding-right: 5rem;
+            text-align: center;
+        }
+        .section-pricing__title {
+            font-family: $font-headers;
+            text-transform: capitalize;
+            font-size: $font-size-headings-sm - 1.5rem;
+            font-weight: bold;
+            width: 100%;
+        }
+        .section-pricing__price {
+            font-size: 4.6rem;
+            font-weight: lighter;
+            color: $color-red;
+        }
+        .section-pricing__price_blue {
+            color: $color-blue;
+        }
+        .section-pricing__price_teal {
+            color: $color-green;
+        }
+        .section-pricing__list {
+            list-style-type: none;
+            list-style-image: url('../img/Checkmark-3.svg');
+            list-style-position: inside;
+            @include flex (center, flex-start, column);
+            .section-pricing__feature {
+                font-size: $font-size-smaller;
+                padding: 1rem 0;
+            }
+            .section-pricing__feature_close {
+                list-style-image: url('../img/Close.svg');
+            }
+        }
+        .section-pricing__btn {
+            font-weight: bold;
+            font-size: $font-size-basic;
+            background-color: $color-red;
+            color: #fff;
+            padding: 1rem 4rem;
+            border-radius: 23px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -2.5rem;
+            cursor: pointer;
+            z-index: 2;
+            transition: background .2s;
+            &:hover {
+                background-color: rgb(189, 44, 75);
+            }
+        }
+        .section-pricing__btn_blue {
+                background-color: $color-blue;
+                &:hover {
+                    background-color: rgb(8, 135, 185);
+                }
+        }
+        .section-pricing__btn_teal {
+            background-color: $color-green;
+            &:hover {
+                background-color: rgb(71, 189, 151);
+            }
+        }
+    }
+    .section-pricing__item_basic {
+        border: 2px solid $color-red;
+        max-width: 350px;
+    }
+    .section-pricing__item_pro {
+        border: 2px solid $color-blue;
+        max-width: 450px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        @include box-shadow(5px,10px,27px,0,$color-blue-shade);
+    }
+    .section-pricing__item_premium {
+        border: 2px solid $color-green;
+        max-width: 350px;
+        margin-bottom: 0;
+    }
+}

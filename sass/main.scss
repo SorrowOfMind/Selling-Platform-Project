@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,400,700,800&display=swap');
+
+@import './utils/reset';
+@import './utils/vars';
+@import './utils/general';
+@import './utils/mixins';
+
+
+@import './components/navbar/nav';
+@import './components/header/header';
+@import './components/section-general/section';
+@import './components/section-platform/section-pltf.scss';
+@import './components/section-pros/section-pros';
+@import './components/section-pricing/section-pricing';
+@import './components/section-form/section-form';
+@import './components/footer/footer';
+
+@media screen and (min-width: $screen-sm) {
+    @import './components/section-platform/section-pltf_lg';
+}
+
+@media screen and (min-width: 624px) {
+    @import './components/section-pros/section-pros_md';
+}
+
+@media screen and (min-width: $screen-md) {
+    @import './components/section-general/section_lg';
+    @import './components/section-pros/section-pros_lg';
+    @import './components/section-form/section-form_lg';
+}
+
+@media screen and (min-width: $screen-lg) {
+    @import './components/navbar/nav_lg';
+    @import './components/header/header_lg';
+    @import './components/section-pricing/section-pricing_lg';
+}

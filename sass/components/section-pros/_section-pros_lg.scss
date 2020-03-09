@@ -1,0 +1,77 @@
+.section-pros__content {
+    .section-pros__item {
+        @include flex (space-between, center, row);
+        padding: 6rem 4rem;
+        .section-pros__textbox {
+            width: 42%;
+            position: relative;
+            padding-bottom: 3rem;
+            @include flex (center, space-between, column);
+            &:after {
+                content: '';
+                width: 80%;
+                border-bottom: 3px solid $color-red;
+                position: absolute;
+                bottom: 0;
+            }
+            &_blue-line:after {
+                border-bottom: 3px solid $color-blue;
+                right: 0;
+            }
+        }
+        .section-pros__img {
+            width: 50%;
+            margin: 0;
+        }
+        .section-pros__img_laptop {
+            order: 2;
+            position: relative;
+            top: 2rem;
+        }
+        .section-pros__textbox_reversed {
+            order: 1;
+            .section-pros__title_left {
+                text-align: left;
+                padding: 2rem 0;
+            }
+        }
+        .section-pros__title_right {
+            text-align: right;
+            padding: 2rem 0;
+
+        }
+    }
+    .section-pros__item_no-bg-color {
+        background-color: $color-none;
+        padding: 0;
+        overflow: visible;
+        @include flex (space-between, stretch, row);
+        @include box-shadow(0,0,0,0, $color-none);
+        .section-pros__textbox_h100_teal-line {
+            width: 60%;
+            background-color: #fff;
+            padding: 8rem 3rem 10rem 3rem;
+            border-radius: 8px;
+            @include box-shadow(1px, 1px, 4px, 2px ,$shadow-light);
+            &:after {
+                border-bottom: 3px solid $color-green;
+                bottom: 7rem;
+                width: 60%;
+            }
+            .section-pros__title_left {
+                text-align: left;
+            }
+        }
+        .section-pros__img_trumpet {
+            width: 35%;
+            min-height: 100%;
+            border-radius: 8px;
+            @include box-shadow(1px, 1px, 4px, 2px ,$shadow-light);
+            @include flex (center, center, row);
+            .img__trumpet {
+                width: 80%;
+            }
+        }
+    }
+}
+

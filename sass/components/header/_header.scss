@@ -1,0 +1,36 @@
+.header {
+    height: 100vh - 7;
+    background: url(../img/Background.png) scroll bottom/contain no-repeat;
+    .header__content {
+        text-align: center;
+        padding: 10rem 4rem;
+    }
+    .header__title {
+        text-transform: capitalize;
+        font-size: $font-size-headings;
+        font-family: 'Raleway', sans-serif;
+    }
+    .header__text {
+        font-size: $font-size-smaller;
+        padding: 2rem 2rem 3rem 2rem;
+    }
+    .btn {
+        font-size: $font-size-smaller;
+        max-width: 40rem;
+        display: block;
+        margin: 0 auto;
+        background-color: $color-blue;
+        color: #fff;
+        font-weight: bold;
+    }
+    .header__btn {
+        padding: 1.8rem 0;
+        border-radius: 4rem;
+        @include box-shadow(5px, 10px, 14px, 0, $color-blue-shade);
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        &:hover {
+            background-color: $color-red;
+        }
+    }
+}

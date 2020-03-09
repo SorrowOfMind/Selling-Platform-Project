@@ -1,0 +1,13 @@
+.container_smaller {
+    padding-top: 10rem;
+    @include flex (space-between, stretch, row);
+    .section-form__header {
+        width: 50%;
+    }
+    .section-form__form {
+        width: 50%;
+        .label {
+            padding: 0 0 1rem 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@mixin flex($justify, $align, $dir) {
+    display: flex;  
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin box-shadow($x, $y, $blur, $offset, $color) {
+    -webkit-box-shadow: $x $y $blur $offset $color;
+     box-shadow: $x $y $blur $offset $color;
+}
+
+@function strip-unit($val) {
+    @return $val / ($val * 0 + 1);
+}
+
+@mixin fluid-width($min, $max) {
+    width: calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - 380px) / 1220));
+}
+
+@mixin fluid-height($min, $max) {
+    height: calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - 380px) / 1220));
+}

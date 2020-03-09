@@ -1,0 +1,79 @@
+.navbar {
+    height: 7rem;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: #fff;
+    .navbar__content {
+        height: 100%;
+        position: relative;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        @include box-shadow(0, 4px, 3px, 0, $shadow-light);
+        .logo__text {
+            font-family: $font-headers;
+            font-size: $font-size-headings;
+            font-weight: lighter;
+            color: $color-blue;
+            line-height: 7rem;
+            height: 7rem;
+        }
+        .menu {
+            height: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            @include box-shadow(0, 4px, 3px, 0, $shadow-light);
+            text-transform: uppercase;
+            background-color: #fff;
+            overflow: hidden;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            .menu__link {
+                display: block;
+                font-size: $font-size-basic;
+                font-weight: bold;
+                color: $color-gray;
+                padding: 1rem;
+                -webkit-transition: all .3s;
+                transition: all .3s;
+                &:hover {
+                    color: #000000;
+                }
+            }
+        }
+        .hamburger-container {
+            position: absolute;
+            top: 2rem;
+            right: 2.5rem;
+            height: 3rem;
+            @include flex(space-between, center, column);
+            flex-flow: column nowrap;
+            cursor: pointer;
+            .hamburger {
+                width: 4rem;
+                height: 0;
+                border-bottom: 3px solid $color-blue;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+.change .line-1 {
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}

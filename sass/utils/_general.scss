@@ -1,0 +1,25 @@
+body {
+    font-family: $font-general;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1352px;
+    padding: 0 1.5rem;
+}
+
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+    clear:both;
+}

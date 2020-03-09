@@ -1,0 +1,102 @@
+.container_smaller {
+    padding: 2rem 2rem 4rem 2rem;
+    max-width: 800px;
+    .section-form__title_left {
+        text-align: left;
+        padding: 0;
+    }
+    .section-form__subtitle {
+        text-align: left;
+        font-size: $font-size-smaller;
+        padding: 1rem 0 4rem 0;
+
+    }
+    .section-form__info {
+        display: block;
+        font-size: $font-size-smaller;
+        color: $color-gray;
+        position: relative;
+        padding: .5rem 2rem .5rem 3.5rem;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .section-form__info_phone-icon {
+        padding-bottom: 3rem;
+        &:before {
+            content: url('../img/Phone\ Icon.svg');
+            padding-bottom: 2.8rem;
+        }
+    }
+    .section-form__info_mail-icon:before {
+        content: url('../img/Mail\ Icon.svg');
+    }
+    .section-form__input {
+        border-bottom: 2px solid $color-gray;
+        width: 100%;
+        height: 2rem;
+        font-size: $font-size-basic;
+        margin-bottom: 3rem;
+        padding: 1rem 0;
+        display: block;
+    }
+    .label {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-blue;
+        font-size: $font-size-smaller - .2rem;
+        letter-spacing: .2rem;
+        padding: 2rem 0 1rem 0;
+    }
+    .consent-wrapper {
+        @include flex (space-between, stretch, row);
+        .search-form__consent {
+            color: $color-gray;
+            width: 90%;
+            text-align: justify;
+            font-size: $font-size-smaller - .3rem;
+            padding-bottom: 3rem;
+        }
+        .section-form__checkbox {
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 2px solid $color-gray;
+            border-radius: 4px;
+            width: 2rem;
+            height: 2rem;
+            &:after {
+                content: url('../img/Checkmark-2.svg');
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+            }
+            &:checked:after {
+                opacity: 1;
+            }
+        }
+    }
+    .section-form__btn {
+        background-color: $color-blue;
+        color: #fff;
+        font-size: $font-size-smaller;
+        position: relative;
+        font-weight: bold;
+        padding: 2rem 9rem;
+        border-radius: 35px;
+        align-self: right;
+        float: right;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            background-color: $color-red;
+        }
+    }
+}
